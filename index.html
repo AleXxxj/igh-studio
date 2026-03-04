@@ -4,62 +4,626 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary Meta Tags -->
-    <title>Igh Studio - Building Scalable Technology Solutions</title>
-    <meta name="title" content="Igh Studio - Building Scalable Technology Solutions for Real-World Challenges">
-    <meta name="description" content="We design and build technology solutions that solve real business and community challenges across emerging ecosystems.">
-    <meta name="keywords" content="tech studio, software development, civic tech, business solutions, africa tech">
-    <meta name="author" content="Igh Studio">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://igh.studio">
-    <meta property="og:title" content="Igh Studio - Building Scalable Technology Solutions">
-    <meta property="og:description" content="We design and build technology solutions that solve real business and community challenges across emerging ecosystems.">
-    <meta property="og:image" content="/images/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://igh.studio">
-    <meta property="twitter:title" content="Igh Studio - Building Scalable Technology Solutions">
-    <meta property="twitter:description" content="We design and build technology solutions that solve real business and community challenges across emerging ecosystems.">
-    <meta property="twitter:image" content="/images/og-image.jpg">
+    <title>igh STUDIO - Building Scalable Technology Solutions</title>
+    <meta name="description" content="Igh Studio partners with businesses and communities across emerging ecosystems to design, build, and scale impactful digital systems.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a4a4a;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0ea5e9;
+        }
+
+        .btn-outline {
+            border: 1.5px solid #0ea5e9;
+            color: #0ea5e9;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #0ea5e9;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(14,165,233,0.03) 0%, rgba(139,92,246,0.03) 100%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #0a0a0a;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: #0ea5e9;
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #4a4a4a;
+            max-width: 600px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        .btn-primary {
+            background: #0ea5e9;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #0284c7;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(14,165,233,0.2);
+        }
+
+        .btn-secondary {
+            border: 1.5px solid #0ea5e9;
+            color: #0ea5e9;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: #0ea5e9;
+            color: white;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .mouse {
+            width: 26px;
+            height: 40px;
+            border: 2px solid #d1d5db;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .mouse::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: #0ea5e9;
+            border-radius: 2px;
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            75% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(0); }
+        }
+
+        /* What We Do Section */
+        .what-we-do {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .solution-card {
+            background: #f9fafb;
+            padding: 48px 40px;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .solution-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .solution-tags {
+            color: #0ea5e9;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .solution-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .solution-list li {
+            color: #4b5563;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .solution-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #0ea5e9;
+        }
+
+        .learn-more {
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .learn-more:hover {
+            gap: 12px;
+        }
+
+        /* Our Approach Section */
+        .approach {
+            padding: 100px 0;
+            background: #f9fafb;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+        .approach-item {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .approach-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #e5e7eb;
+            margin-bottom: 16px;
+        }
+
+        .approach-item h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .approach-item p {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Navigation buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: 1px solid #e5e7eb;
+            background: white;
+            border-radius: 8px;
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            border-color: #0ea5e9;
+            color: #0ea5e9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1f2937;
+            padding-top: 30px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .approach-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Custom cursor (for desktop) -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-follower"></div>
-
-    <!-- Header -->
+    <!-- Header exactly like mockup -->
     <header class="header">
         <div class="container">
-            <nav class="navbar">
+            <nav class="nav">
                 <a href="/" class="logo">
-                    <img src="images/logo.svg" alt="Igh Studio" class="logo-img">
                     <span class="logo-text">igh STUDIO</span>
                 </a>
                 
-                <div class="nav-menu">
-                    <ul class="nav-links">
-                        <li><a href="#about" class="nav-link">About</a></li>
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-small">Get in Touch</a>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <a href="contact.html" class="btn-outline">Get in Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section exactly like mockup -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Building Scalable Technology Solutions
+                        <span>for Real-World Challenges.</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Igh Studio partners with businesses and communities across emerging ecosystems to design, build, and scale impactful digital systems.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-primary">Work With Us</a>
+                        <a href="services.html" class="btn-secondary">Explore Our Solutions</a>
+                    </div>
                 </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- What We Do Section matching mockup -->
+        <section class="what-we-do">
+            <div class="container">
+                <h2 class="section-title">What We Do</h2>
+                <p class="section-subtitle">Building solutions that matter for businesses and communities</p>
+                
+                <div class="solutions-grid">
+                    <!-- Business Solutions -->
+                    <div class="solution-card">
+                        <h3 class="solution-title">Business Solutions</h3>
+                        <p class="solution-tags">Automation, Data Systems, AI & SaaS</p>
+                        <ul class="solution-list">
+                            <li>Process Automation</li>
+                            <li>Data Systems & Dashboards</li>
+                            <li>AI & Intelligent Workflows</li>
+                            <li>Scalable SaaS Infrastructure</li>
+                        </ul>
+                        <a href="services.html#business" class="learn-more">Learn More →</a>
+                    </div>
+                    
+                    <!-- Community Solutions -->
+                    <div class="solution-card">
+                        <h3 class="solution-title">Community Solutions</h3>
+                        <p class="solution-tags">Civic Tech, Education, Engagement Platforms</p>
+                        <ul class="solution-list">
+                            <li>Civic Tech Platforms</li>
+                            <li>Education Systems</li>
+                            <li>Transparency & Engagement Tools</li>
+                            <li>Local Digital Commerce Systems</li>
+                        </ul>
+                        <a href="services.html#community" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach Section -->
+        <section class="approach">
+            <div class="container">
+                <h2 class="section-title">Our Approach to Innovation</h2>
+                <p class="section-subtitle">From research to scalable impact</p>
+                
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <div class="approach-number">01</div>
+                        <h3>Research & Analysis</h3>
+                        <p>Deep problem analysis and market research</p>
+                    </div>
+                    
+                    <div class="approach-item">
+                        <div class="approach-number">02</div>
+                        <h3>System Architecture</h3>
+                        <p>Strategic design for scalable solutions</p>
+                    </div>
+                    
+                    <div class="approach-item">
+                        <div class="approach-number">03</div>
+                        <h3>Development & Deployment</h3>
+                        <p>Agile development and CI/CD</p>
+                    </div>
+                    
+                    <div class="approach-item">
+                        <div class="approach-number">04</div>
+                        <h3>Scaling & Optimization</h3>
+                        <p>Data-driven growth and optimization</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="nav-buttons">
+                    <a href="about.html" class="nav-btn">About Us</a>
+                    <a href="case-studies.html" class="nav-btn">Case Studies</a>
+                    <a href="contact.html" class="nav-btn">Contact</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">igh STUDIO</div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 igh STUDIO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>                </div>
                 
                 <button class="mobile-menu-btn" aria-label="Menu">
                     <span></span>
