@@ -4,698 +4,480 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>igh STUDIO - Building Scalable Technology Solutions</title>
-    <meta name="description" content="Igh Studio partners with businesses and communities across emerging ecosystems to design, build, and scale impactful digital systems.">
+    <!-- Primary Meta Tags -->
+    <title>Igh Studio - Building Scalable Technology Solutions</title>
+    <meta name="title" content="Igh Studio - Building Scalable Technology Solutions for Real-World Challenges">
+    <meta name="description" content="We design and build technology solutions that solve real business and community challenges across emerging ecosystems.">
+    <meta name="keywords" content="tech studio, software development, civic tech, business solutions, africa tech">
+    <meta name="author" content="Igh Studio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://igh.studio">
+    <meta property="og:title" content="Igh Studio - Building Scalable Technology Solutions">
+    <meta property="og:description" content="We design and build technology solutions that solve real business and community challenges across emerging ecosystems.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://igh.studio">
+    <meta property="twitter:title" content="Igh Studio - Building Scalable Technology Solutions">
+    <meta property="twitter:description" content="We design and build technology solutions that solve real business and community challenges across emerging ecosystems.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        /* Header Section - Exact Match */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            z-index: 1000;
-            padding: 20px 0;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 32px;
-            width: auto;
-        }
-
-        .logo-text {
-            font-weight: 700;
-            font-size: 24px;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #1a1a1a;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.2s;
-            letter-spacing: -0.01em;
-        }
-
-        .nav-links a:hover {
-            color: #0ea5e9;
-        }
-
-        .btn-outline {
-            border: 1.5px solid #0ea5e9;
-            color: #0ea5e9;
-            padding: 12px 28px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.3s;
-            background: transparent;
-            letter-spacing: -0.01em;
-        }
-
-        .btn-outline:hover {
-            background: #0ea5e9;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(14,165,233,0.15);
-        }
-
-        /* Hero Section - With Background Image/Pattern */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
-            padding: 120px 0 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Advanced background pattern */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGU5NWU5IiBzdHJva2Utd2lkdGg9IjAuMiIgb3BhY2l0eT0iMC4yIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+');
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            right: -10%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(14,165,233,0.05) 0%, rgba(139,92,246,0.05) 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-size: 72px;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            color: #000000;
-            margin-bottom: 24px;
-        }
-
-        .hero-title span {
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: #4b5563;
-            max-width: 600px;
-            margin-bottom: 48px;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .btn-primary {
-            background: #0ea5e9;
-            color: white;
-            padding: 16px 36px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            display: inline-block;
-            letter-spacing: -0.01em;
-            box-shadow: 0 4px 6px rgba(14,165,233,0.1);
-        }
-
-        .btn-primary:hover {
-            background: #0284c7;
-            transform: translateY(-2px);
-            box-shadow: 0 20px 30px rgba(14,165,233,0.2);
-        }
-
-        .btn-secondary {
-            border: 1.5px solid #0ea5e9;
-            color: #0ea5e9;
-            padding: 16px 36px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s;
-            background: transparent;
-            letter-spacing: -0.01em;
-        }
-
-        .btn-secondary:hover {
-            background: #0ea5e9;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Video Section */
-        .video-section {
-            padding: 80px 0;
-            background: white;
-            position: relative;
-        }
-
-        .video-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-            position: relative;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .video-wrapper {
-            position: relative;
-            aspect-ratio: 16/9;
-            background: #000;
-        }
-
-        .video-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-        }
-
-        .video-play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .video-play-btn:hover {
-            background: rgba(14,165,233,0.8);
-            border-color: white;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .video-play-btn svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-            margin-left: 4px;
-        }
-
-        .video-caption {
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-            color: white;
-            font-size: 24px;
-            font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .video-caption span {
-            display: block;
-            font-size: 16px;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-top: 8px;
-        }
-
-        /* What We Do Section - Centered Title */
-        .what-we-do {
-            padding: 100px 0;
-            background: #ffffff;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 60px;
-        }
-
-        .section-title {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-            color: #000000;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: #6b7280;
-            line-height: 1.6;
-        }
-
-        .solutions-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* Advanced Tech Cards */
-        .solution-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
-            border-radius: 32px;
-            padding: 48px 40px;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(14,165,233,0.1);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
-            transition: all 0.4s;
-        }
-
-        .solution-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #0ea5e9, #6366f1);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s;
-        }
-
-        .solution-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 40px 60px -15px rgba(14,165,233,0.3);
-        }
-
-        .solution-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 32px;
-        }
-
-        .card-icon svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-        }
-
-        .solution-title {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #000000;
-        }
-
-        .solution-tags {
-            color: #0ea5e9;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .solution-list {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .solution-list li {
-            color: #4b5563;
-            margin-bottom: 16px;
-            padding-left: 28px;
-            position: relative;
-            font-size: 16px;
-        }
-
-        .solution-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #0ea5e9;
-            font-weight: 600;
-        }
-
-        .learn-more {
-            color: #0ea5e9;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: gap 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .learn-more:hover {
-            gap: 12px;
-        }
-
-        .learn-more::after {
-            content: '→';
-            font-size: 18px;
-        }
-
-        /* Approach Section */
-        .approach {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .approach-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .approach-header h2 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .approach-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 24px;
-            text-align: center;
-            box-shadow: 0 20px 35px -8px rgba(0,0,0,0.1);
-            border: 1px solid rgba(14,165,233,0.1);
-            transition: all 0.3s;
-        }
-
-        .approach-card:hover {
-            transform: translateY(-5px);
-            border-color: #0ea5e9;
-        }
-
-        .approach-number {
-            font-size: 56px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-        }
-
-        .approach-card h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #000000;
-        }
-
-        .approach-card p {
-            color: #6b7280;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 56px;
-            }
-            
-            .approach-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-title {
-                font-size: 42px;
-            }
-            
-            .solutions-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .approach-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .video-caption {
-                font-size: 18px;
-                bottom: 20px;
-                left: 20px;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-    <!-- Header - Exact Match with larger logo and gradient text -->
+    <!-- Custom cursor (for desktop) -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <nav class="nav">
+            <nav class="navbar">
                 <a href="/" class="logo">
+                    <img src="images/logo.svg" alt="Igh Studio" class="logo-img">
                     <span class="logo-text">igh STUDIO</span>
                 </a>
                 
-                <ul class="nav-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-small">Get in Touch</a>
+                </div>
                 
-                <a href="contact.html" class="btn-outline">Get In Touch</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section with Background Pattern -->
-        <section class="hero">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-particles" id="particles"></div>
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content animate-on-load">
                     <h1 class="hero-title">
                         Building Scalable Technology Solutions
-                        <span>for Real-World Challenges.</span>
+                        <span class="gradient-text">for Real-World Challenges.</span>
                     </h1>
-                    
                     <p class="hero-subtitle">
-                        Igh Studio partners with businesses and communities across emerging ecosystems to design, build, and scale impactful digital systems.
+                        Igh Studio partners with businesses and communities across emerging 
+                        ecosystems to design, build, and scale impactful digital systems.
                     </p>
-                    
                     <div class="hero-buttons">
-                        <a href="contact.html" class="btn-primary">Work With Us</a>
-                        <a href="services.html" class="btn-secondary">Explore Our Solutions</a>
+                        <a href="#contact" class="btn btn-primary btn-large">Work With Us</a>
+                        <a href="#services" class="btn btn-outline btn-large">Explore Our Solutions</a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll</span>
+            </div>
         </section>
 
-        <!-- Video Section - Advanced Tech Card -->
-        <section class="video-section">
+        <!-- AI Welcome Video Section -->
+        <section class="video-welcome section-padding">
             <div class="container">
-                <div class="video-container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title">Welcome to Igh Studio</h2>
+                    <p class="section-subtitle">Watch a quick introduction to our studio and how we can help you</p>
+                </div>
+                
+                <div class="video-container animate-on-scroll">
                     <div class="video-wrapper">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" alt="Tech Innovation">
-                        <div class="video-play-btn">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
+                        <video id="welcome-video" poster="images/video-poster.jpg" class="video-player">
+                            <source src="videos/welcome.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        <!-- Custom Video Controls -->
+                        <div class="video-controls">
+                            <button class="video-play-btn" aria-label="Play/Pause">
+                                <svg class="play-icon" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            
+                            <div class="video-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-filled"></div>
+                                </div>
+                                <div class="progress-handle"></div>
+                            </div>
+                            
+                            <div class="video-time">
+                                <span class="current-time">0:00</span>
+                                <span>/</span>
+                                <span class="duration">1:30</span>
+                            </div>
+                            
+                            <button class="video-mute-btn" aria-label="Mute/Unmute">
+                                <svg class="mute-icon" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+                                </svg>
+                            </button>
+                            
+                            <button class="video-fullscreen-btn" aria-label="Fullscreen">
+                                <svg class="fullscreen-icon" viewBox="0 0 24 24">
+                                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="video-caption">
-                            Our Approach to Innovation
-                            <span>Watch how we build scalable solutions</span>
+                        
+                        <!-- Video Overlay (appears on pause) -->
+                        <div class="video-overlay">
+                            <h3>Building Scalable Technology Solutions</h3>
+                            <p>Explore our solutions, review our case studies, or book a strategy session to start building with us.</p>
+                            <div class="overlay-buttons">
+                                <a href="#services" class="btn btn-small btn-primary">Explore Solutions</a>
+                                <a href="#contact" class="btn btn-small btn-outline">Book Strategy Call</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- What We Do Section - Centered Title -->
-        <section class="what-we-do">
+        <!-- Trust Metrics Section -->
+        <section class="metrics section-padding bg-light">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title">Trusted by Emerging Businesses & Communities</h2>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-item animate-on-scroll" data-delay="0">
+                        <div class="metric-value">
+                            <span class="counter" data-target="10">0</span><span class="suffix">+</span>
+                        </div>
+                        <div class="metric-label">Solutions Delivered</div>
+                    </div>
+                    
+                    <div class="metric-item animate-on-scroll" data-delay="0.1">
+                        <div class="metric-value">
+                            <span class="counter" data-target="3">0</span>
+                        </div>
+                        <div class="metric-label">Ecosystems Served</div>
+                    </div>
+                    
+                    <div class="metric-item animate-on-scroll" data-delay="0.2">
+                        <div class="metric-value">
+                            <span class="counter" data-target="95">0</span><span class="suffix">%</span>
+                        </div>
+                        <div class="metric-label">Client Retention</div>
+                    </div>
+                    
+                    <div class="metric-item animate-on-scroll" data-delay="0.3">
+                        <div class="metric-value">
+                            <span class="counter" data-target="2">0</span>
+                        </div>
+                        <div class="metric-label">Ventures in Development</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
                     <h2 class="section-title">What We Do</h2>
                     <p class="section-subtitle">Building solutions that matter for businesses and communities</p>
                 </div>
                 
-                <div class="solutions-grid">
-                    <!-- Business Solutions Card - Advanced -->
-                    <div class="solution-card">
-                        <div class="card-icon">
+                <div class="services-grid">
+                    <!-- Business Solutions -->
+                    <div class="service-card animate-on-scroll" data-delay="0.2">
+                        <div class="service-icon business-icon">
                             <svg viewBox="0 0 24 24">
                                 <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 16H4V8h16v12z"/>
                             </svg>
                         </div>
-                        <h3 class="solution-title">Business Solutions</h3>
-                        <p class="solution-tags">Automation, Data Systems, AI & SaaS</p>
-                        <ul class="solution-list">
+                        <h3 class="service-title">Business Solutions</h3>
+                        <p class="service-subtitle">Automation, Data Systems, AI & SaaS</p>
+                        <ul class="service-features">
                             <li>Process Automation</li>
                             <li>Data Systems & Dashboards</li>
                             <li>AI & Intelligent Workflows</li>
                             <li>Scalable SaaS Infrastructure</li>
                         </ul>
-                        <a href="services.html#business" class="learn-more">Learn More</a>
+                        <a href="services.html#business" class="btn btn-outline btn-small">Learn More</a>
                     </div>
                     
-                    <!-- Community Solutions Card - Advanced -->
-                    <div class="solution-card">
-                        <div class="card-icon">
+                    <!-- Community Solutions -->
+                    <div class="service-card animate-on-scroll" data-delay="0.4">
+                        <div class="service-icon community-icon">
                             <svg viewBox="0 0 24 24">
                                 <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-1 .05 1.16.84 2 1.87 2 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                             </svg>
                         </div>
-                        <h3 class="solution-title">Community Solutions</h3>
-                        <p class="solution-tags">Civic Tech, Education, Engagement Platforms</p>
-                        <ul class="solution-list">
+                        <h3 class="service-title">Community Solutions</h3>
+                        <p class="service-subtitle">Civic Tech, Education, Engagement Platforms</p>
+                        <ul class="service-features">
                             <li>Civic Tech Platforms</li>
                             <li>Education Systems</li>
                             <li>Transparency & Engagement Tools</li>
                             <li>Local Digital Commerce Systems</li>
                         </ul>
-                        <a href="services.html#community" class="learn-more">Learn More</a>
+                        <a href="services.html#community" class="btn btn-outline btn-small">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Our Approach Section -->
-        <section class="approach">
+        <section class="approach section-padding bg-light">
             <div class="container">
-                <div class="approach-header">
+                <div class="section-header animate-on-scroll">
                     <h2 class="section-title">Our Approach to Innovation</h2>
                     <p class="section-subtitle">From research to scalable impact</p>
                 </div>
                 
-                <div class="approach-grid">
-                    <div class="approach-card">
-                        <div class="approach-number">01</div>
-                        <h3>Research & Analysis</h3>
-                        <p>Deep problem analysis and market research to understand core challenges</p>
+                <div class="approach-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="approach-grid">
+                        <div class="approach-item animate-on-scroll" data-delay="0">
+                            <div class="approach-number">01</div>
+                            <div class="approach-icon research-icon"></div>
+                            <h3>Research & Analysis</h3>
+                            <p>Deep problem analysis and market research to understand the core challenges.</p>
+                        </div>
+                        
+                        <div class="approach-item animate-on-scroll" data-delay="0.2">
+                            <div class="approach-number">02</div>
+                            <div class="approach-icon architecture-icon"></div>
+                            <h3>System Architecture</h3>
+                            <p>Strategic design and system planning for scalable solutions.</p>
+                        </div>
+                        
+                        <div class="approach-item animate-on-scroll" data-delay="0.4">
+                            <div class="approach-number">03</div>
+                            <div class="approach-icon development-icon"></div>
+                            <h3>Development & Deployment</h3>
+                            <p>Agile development with continuous integration and deployment.</p>
+                        </div>
+                        
+                        <div class="approach-item animate-on-scroll" data-delay="0.6">
+                            <div class="approach-number">04</div>
+                            <div class="approach-icon scaling-icon"></div>
+                            <h3>Scaling & Optimization</h3>
+                            <p>Data-driven optimization and infrastructure scaling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section id="case-studies" class="case-study section-padding">
+            <div class="container">
+                <div class="case-study-grid">
+                    <div class="case-study-content animate-on-scroll">
+                        <span class="case-study-label">Featured Case Study</span>
+                        <h2 class="section-title">5 Ways Automation Transformed Nigerian SME Operations</h2>
+                        <p class="case-study-description">
+                            How we helped a Lagos-based retail chain reduce operational costs by 40% 
+                            and increase customer satisfaction through intelligent automation.
+                        </p>
+                        
+                        <div class="case-study-metrics">
+                            <div class="case-metric">
+                                <div class="metric-highlight">40%</div>
+                                <div class="metric-desc">Cost Reduction</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="metric-highlight">10k+</div>
+                                <div class="metric-desc">Users Onboarded</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="metric-highlight">60%</div>
+                                <div class="metric-desc">Faster Processing</div>
+                            </div>
+                        </div>
+                        
+                        <a href="case-studies.html" class="btn btn-primary">
+                            Read Full Case Study
+                            <svg class="btn-icon" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
                     </div>
                     
-                    <div class="approach-card">
-                        <div class="approach-number">02</div>
-                        <h3>System Architecture</h3>
-                        <p>Strategic design and system planning for scalable solutions</p>
+                    <div class="case-study-visual animate-on-scroll" data-delay="0.3">
+                        <div class="visual-container">
+                            <img src="images/case-study-dashboard.jpg" alt="Case Study Dashboard" class="visual-image">
+                            <div class="live-indicator">
+                                <span class="live-dot"></span>
+                                <span>Live Data</span>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section class="insights section-padding bg-light">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title">Latest from the Studio</h2>
+                    <p class="section-subtitle">Insights, research, and thought leadership</p>
+                </div>
+                
+                <div class="insights-grid">
+                    <article class="insight-card animate-on-scroll" data-delay="0">
+                        <div class="insight-category">Civic Tech</div>
+                        <h3 class="insight-title">The Future of Civic Tech in Emerging Markets</h3>
+                        <p class="insight-excerpt">How digital platforms are transforming citizen engagement and government transparency across Africa.</p>
+                        <a href="#" class="insight-link">Read Article →</a>
+                    </article>
                     
-                    <div class="approach-card">
-                        <div class="approach-number">03</div>
-                        <h3>Development & Deployment</h3>
-                        <p>Agile development with continuous integration and deployment</p>
-                    </div>
+                    <article class="insight-card animate-on-scroll" data-delay="0.1">
+                        <div class="insight-category">Data Systems</div>
+                        <h3 class="insight-title">Building Scalable Data Infrastructure for SMEs</h3>
+                        <p class="insight-excerpt">A practical guide to implementing data systems that grow with your business.</p>
+                        <a href="#" class="insight-link">Read Article →</a>
+                    </article>
                     
-                    <div class="approach-card">
-                        <div class="approach-number">04</div>
-                        <h3>Scaling & Optimization</h3>
-                        <p>Data-driven optimization and infrastructure scaling</p>
+                    <article class="insight-card animate-on-scroll" data-delay="0.2">
+                        <div class="insight-category">AI & Automation</div>
+                        <h3 class="insight-title">5 Ways AI is Transforming Community Services</h3>
+                        <p class="insight-excerpt">From education to healthcare, AI-powered solutions are creating real impact.</p>
+                        <a href="#" class="insight-link">Read Article →</a>
+                    </article>
+                </div>
+                
+                <div class="insights-footer animate-on-scroll">
+                    <a href="#" class="btn btn-outline">View All Insights</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="contact" class="cta section-padding">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2 class="cta-title">Have a real problem that needs a structured solution?</h2>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary btn-large">Book a Strategy Session</a>
+                        <a href="#" class="btn btn-outline-light btn-large">Start a Project</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo-white.svg" alt="Igh Studio" class="footer-logo">
+                    <p class="footer-description">Building scalable technology solutions for real-world challenges.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">Community Solutions</a></li>
+                        <li><a href="#">Civic Tech</a></li>
+                        <li><a href="#">Data Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@igh.studio">hello@igh.studio</a></li>
+                        <li><a href="tel:+234123456789">+234 123 456 789</a></li>
+                        <li>Lagos, Nigeria</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Igh Studio. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/particles.js"></script>
+    <script src="js/video-player.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Console Easter Egg -->
+    <script>
+        console.log(
+            "%c👋 Welcome to Igh Studio. Built with HTML, CSS, and ❤️",
+            "color: #0ea5e9; font-size: 14px; font-weight: bold; padding: 10px;"
+        );
+        console.log(
+            "%c🔍 Inspecting our code? Check out our GitHub: github.com/igh-studio",
+            "color: #8b5cf6; font-size: 12px;"
+        );
+    </script>
 </body>
 </html>
